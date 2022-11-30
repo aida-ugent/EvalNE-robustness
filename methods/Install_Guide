@@ -1,0 +1,64 @@
+In the system were this guide was made we have:
+	/usr/bin/python -> python2.7
+	/usr/bin/python3 -> python3.6.9
+Simply calling virtualenv venv would result in a virtualenv with Python3.8 installed
+
+
+Deepwalk
+---------------------------------
+$ sudo apt install python-dev
+$ virtualenv -p /usr/bin/python venv
+$ venv/bin/pip install -r requirements.txt
+$ venv/bin/python setup.py install
+Ensure that $LD_LIBRARY_PATH points to nothing
+
+
+LINE
+---------------------------------
+Compile the line code again using:
+$ g++ line.cpp -o line -lpthread -lgsl -lgslcblas
+make sure the following libs are installed:
+  libgsl-dev libgslcblas0
+
+
+M-NMF
+---------------------------------
+Requires py3.5 but dependencies won't work there, use python2.7
+$ virtualenv -p /usr/bin/python venv
+$ venv/bin/pip install -r requirements.txt
+
+
+Node2vec
+---------------------------------
+Remove pkg-resources==0.0.0 from the req list
+set gensim==0.13.3
+$ virtualenv -p /usr/bin/python venv
+$ venv/bin/pip install -r req.txt
+
+
+OpenNE
+---------------------------------
+remove pkg-resources==0.0.0 and openne==0.0.0 from the req.txt list
+$ virtualenv -p /usr/bin/python venv
+$ venv/bin/pip install -r req.txt
+$ cd src
+$ ../venv/bin/python setup.py install
+Numpy 14 wil not work properly so install numpy 16 (verion incompatible with tensorflow, but works)
+$ ../venv/bin/pip install numpy==1.16
+
+
+Verse
+---------------------------------
+$ virtualenv -p /usr/bin/python venv
+$ venv/bin/pip install numpy scipy click argparse networkx==1.11
+
+
+NetMF
+---------------------------------
+Theano throws errors on python 3.6 so we use python 2.7 instead
+$ virtualenv -p /usr/bin/python2.7 venv
+Create requirements.txt containing: numpy, scipy, sklearn, theano, networkx
+$ venv/bin/pip install -r requirements.txt
+Use the provided main_NetMF.py file to run the method 
+
+
