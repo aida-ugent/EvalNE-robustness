@@ -1,4 +1,4 @@
-# A Systematic Evaluation of Node Embedding Robustness #
+# Code for reproducing the experients of "A Systematic Evaluation of Node Embedding Robustness", LoG 2022 #
 
 This folder contains the EvalNE framework as well as our proposed extension towards robustness 
 evaluation. This code together with the config files included in the `experiments` folder
